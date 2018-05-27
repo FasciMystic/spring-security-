@@ -120,7 +120,7 @@ medate元数据   collaborators 合作者
 在XML配置中，可以使用**<alias/>**元素指定别名。 
 
 ```
-
+<alias name="fromName" alias="toName"/>
 ```
 
 **Java配置**  如果使用Java配置，**@Bean**注解可以用于提供别名 
