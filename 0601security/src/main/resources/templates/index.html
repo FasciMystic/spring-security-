@@ -1,0 +1,31 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+<meta charset="UTF-8" />
+ 
+<title></title>
+</head>
+<body>
+	<span sec:authentication="name"></span>
+	<span sec:authentication="name"></span>
+	<span sec:authentication="name"></span>
+	<span sec:authentication="name"></span>
+	
+	Logged user:
+	<span sec:authentication="name">Bob</span> Roles:
+	<span sec:authentication="principal.authorities">[ROLE_USER,ROLE_ADMIN]</span>
+	<ul sec:authorize="isAnonymous()" class="nav navbar-nav navbar-right">
+		<li><a th:href="@{/login}">Login </a></li>
+		<li><a th:href="@{/register}">Sign Up</a></li>
+	</ul>
+	<ul sec:authorize="isAuthenticated()"
+		class="nav navbar-nav navbar-right">
+			<li><a th:href="@{/admin/list}">list</a></li>
+		<li><a th:href="@{logout}">Log out</a></li>
+		<li><a href=" " th:href="logout"><i class="fa fa-sign-out"></i> 退出</a></li>
+		
+	</ul>
+</body>
+</html>
