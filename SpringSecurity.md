@@ -39,7 +39,9 @@ introduce Spring Security 4.0
 > - Jasypt *
 > - 滚筒 *
 > - 弹性路径*
-> - Atlassian人群*  
+> - Atlassian人群*
+
+(cas,DAP,Auth2)
 
 ### 2.2 history
 
@@ -291,4 +293,6 @@ protected void configure(HttpSecurity http) throws Exception {
 ```
 
 通常，为了自定义注销功能，可以添加 `LogoutHandler` 和/或 `LogoutSuccessHandler` 实现。 
+
+
 
